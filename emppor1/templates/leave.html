@@ -1,0 +1,47 @@
+{% extends 'layout1.html' %}
+{% block body %}
+    <br><br>
+
+  <!-- {{form.name}} -->
+ <div class="container-fluid">
+ 
+ <div class="row">
+   <div class="col-sm-3" style="background-color:lavender;"></div>
+ <div class="col-sm-6" style="background-color:lavender;">
+ <div class="form-group">
+   <center><h1>Leaves Page</h1></center>
+ </div>
+
+ {% from "includes/_formhelper.html" import render_field %}
+ <form method="POST" action="#">
+     <div class="form-group">
+       {{render_field(form.empid, class_="form-control")}}
+     </div>
+     <div class="form-group">
+       {{render_field(form.empname, class_="form-control")}}
+     </div>
+     <div class="form-group">
+       {{render_field(form.department, class_="form-control")}}
+     </div>
+     <div class="form-group">
+       {{render_field(form.leavefrom, class_="form-control")}}
+     </div>
+     <div class="form-group">
+       {{render_field(form.leaveto, class_="form-control")}}
+     </div>
+     <div class="form-group">
+       {{render_field(form.Number_of_days, class_="form-control")}}
+     </div>
+     <div class="form-group">
+           {{render_field(form.Reason, class_="form-control")}}
+       </div>
+     <p>
+       <input type="submit" class="btn btn-primary" value="Submit">
+     </p>
+ </form>
+ </div>
+ <div class="col-sm-3" style="background-color:lavender;"></div>
+ </div>
+</div>
+
+{% endblock %}

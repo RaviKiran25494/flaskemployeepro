@@ -1,0 +1,79 @@
+{% extends 'layout1.html' %}
+
+{% block body %}
+<div class="container-fluid">
+  
+  <div class="row">
+    <div class="col-sm-1" style="background-color:lavender;"></div>
+    <!-- <div class="col-sm-4" style="background-color:lavenderblush;">.col-sm-4</div>
+    <div class="col-sm-4" style="background-color:lavender;">.col-sm-4</div> -->
+  <div class="col-sm-10" style="background-color:lavender;">
+    <div class="form-group">
+       <style>
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    width:5px;
+}
+</style>
+    <center><h1>PaySlip</h1></center></div>
+    <center><table style="width:80%">
+  <tr>
+    <td name='id'><center>ID</center></td>
+    <td><center>{{ rv['id'] }}</center></td>
+  </tr><tr>
+    <th><center>NAME</center></th>
+    <td name='Name'><center>{{ rv['Name'] }}</center></td>
+  </tr><tr>
+    <th><center>father/mothername</center></th><td  name='Father_Mother_Name'><center>{{ rv['Father_Mother_Name'] }}</center></td> 
+  </tr><tr>
+    <th><center>DOB</center></th>
+    <td name='Date_Brith'><center>{{ rv['Date_Brith'] }}</center></td>
+  </tr><tr>
+    <th><center>Address</center></th>
+    <td name='Address'><center>{{ rv['Address'] }}</center></td>
+  </tr><tr>
+    <th><center>Aadher_number</center></th>
+    <td name='Aadhar_number'><center>{{ rv['Aadhar_number'] }}</center></td>
+  </tr><tr>
+    <th><center>Phone_number</center></th>
+    <td name='Phone_number'><center>{{ rv['Phone_number'] }}</center></td>
+  </tr><tr>
+    <th><center>&nbsp;&nbsp; &nbsp;Email_id&nbsp;&nbsp;&nbsp;</center></th>
+    <td  name='Email_id'><center>{{ rv['Email_id'] }}</center></td>
+  </tr><tr>
+    <th><center>Alternate_no</center></th>
+    <td name='Alternate_no'><center>{{ rv['Alternate_no'] }}</center></td>
+  </tr><tr>
+    <th><center>Type</center></th>
+    <td name='Type'><center>{{ rv['Type'] }}</center></td>
+  </tr>
+  <tr>
+    <th><center>Mounth</center></th>
+    <td><center><b>{{ person['mounth'] }}</b></center></td>
+  </tr>
+  <tr>
+    <th><center>Leave_Days</center></th>
+    <td><center><b>{{ person['leave_days'] }}</b></center></td>
+  </tr>
+  <tr>
+    <th><center>Actual_CTC</center></th>
+    <td><center><b>{{ person['actual_ctc'] }}</b></center></td>
+  </tr>
+  <tr>
+    <th><center>Payble_CTC</center></th>
+    <td><center><b>{{ person['payble_ctc'] }}</b></center></td>
+  </tr>
+  </table></center>
+
+
+  </div>
+    </div>
+ </div>
+ </div>
+   <div class="col-sm-1" style="background-color:lavender;"></div>
+   </div>
+</div>
+
+
+{% endblock %}

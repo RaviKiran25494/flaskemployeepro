@@ -1,0 +1,67 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+<div class="container-fluid">
+  
+  <div class="row">
+    <div class="col-sm-1" style="background-color:lavender;"></div>
+    <!-- <div class="col-sm-4" style="background-color:lavenderblush;">.col-sm-4</div>
+    <div class="col-sm-4" style="background-color:lavender;">.col-sm-4</div> -->
+  <div class="col-sm-10" style="background-color:lavender;">
+    <div class="form-group">
+    
+    <center><h1>counselling</h1></center></div>
+    <style>
+table, th, td {
+    border: 2px solid black;
+    border-collapse: collapse;
+    width:10px;
+}
+</style>
+
+<center><table style="width:70%">
+  <tr>
+    <th><center>ID</center></th>
+    <th><center>NAME</center></th>
+    <th><center>father/mothername</center></th>
+    <th><center>DOB</center></th>
+    <th><center>Address</center></th>
+    <th><center>Aadher_number</center></th>
+    <th><center>Phone_number</center></th>
+    <th><center>&nbsp;&nbsp;&nbsp;Email_id&nbsp;&nbsp;&nbsp;</center></th>
+    <th><center>Alternate_no</center></th>
+    <th><center>Type</center></th>
+    <th><center>NEXT</center></th>
+    <th><center>UPLOAD_DOC</center></th>
+    <th><center>BACK</center></th>
+  </tr>  
+  {% for x in rv%}
+  <tr>
+    <td><center>{{x['id']}}</center></td>
+    <td><center>{{x['Name']}}</center></td>
+    <td><center>{{x['Father_Mother_Name']}}</center></td>  
+    <td><center>{{x['Date_Brith']}}</center></td>
+    <td><center>{{x['Address']}}</center></td>
+    <td><center>{{x['Aadhar_number']}}</center></td>
+    <td><center>{{x['Phone_number']}}</center></td>
+    <td><center>{{x['Email_id']}}</center></td>
+    <td><center>{{x['Alternate_no']}}</center></td>
+    <td><center>{{x['Type']}}</center></td>
+
+ <!--    <th>&nbsp;<button type="submit" class="btn btn-success"><center>JOIN</center></button>&nbsp;</th>
+    <th>&nbsp;<button type="submit" class="btn btn-warning"><center>WILLING</center></button>&nbsp;</th>
+    <th>&nbsp;<button type="submit" class="btn btn-danger"><center>DEAD</center></button>&nbsp;</th> </tr> -->
+
+    <th>&nbsp;<button><a class="btn btn-success" href="/next?id={{x['id']}}">NEXT</a></button>&nbsp;</th>
+    <th><center><button><a class="btn btn-warning" href="/12">UPLOAD</a></button></center></th><th><center><button><a class="btn btn-danger" href="/back?id={{x['id']}}">BACK</a></button></center></th>
+  {% endfor %}
+</table></center>
+
+<br><br>
+ </div>
+   <div class="col-sm-1" style="background-color:lavender;"></div>
+   </div>
+</div>
+
+
+{% endblock %}

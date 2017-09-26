@@ -1,0 +1,54 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+  <br><br>
+
+   <!-- {{form.name}} -->
+   <div class="container-fluid">
+  
+  <div class="row">
+    <div class="col-sm-3" style="background-color:lavender;"></div>
+    <!-- <div class="col-sm-4" style="background-color:lavenderblush;">.col-sm-4</div>
+    <div class="col-sm-4" style="background-color:lavender;">.col-sm-4</div> -->
+  <div class="col-sm-6" style="background-color:lavender;">
+  <div class="form-group">
+           <center><h1>Register</h1></center>
+       </div>
+
+   {% from "includes/_formhelper.html" import render_field %}
+   <form method="POST" action="">
+       <div class="form-group">
+           {{render_field(form.name, class_="form-control")}}
+       </div>
+       <div class="form-group">
+           {{render_field(form.father_mother_name, class_="form-control")}}
+       </div>
+       <div class="form-group">
+           {{render_field(form.date_of_brith, class_="form-control")}}
+       </div>
+       <div class="form-group">
+           {{render_field(form.address, class_="form-control")}}
+       </div>
+       <div class="form-group">
+           {{render_field(form.aadhar_number, class_="form-control")}}
+       </div>
+       <div class="form-group">
+           {{render_field(form.mobile, class_="form-control")}}
+       </div>
+       <div class="form-group">
+           {{render_field(form.email, class_="form-control")}}
+       </div>
+       <div class="form-group">
+           {{render_field(form.alternate_no, class_="form-control")}}
+       </div>
+       <div class="form-group">
+           {{render_field(form.type1, class_="form-control")}}
+       </div>
+       <center><p><input type="submit" class="btn btn-primary" value="Submit"></p></center>
+   </form>
+   </div>
+   <div class="col-sm-3" style="background-color:lavender;"></div>
+   </div>
+</div>
+
+{% endblock %}

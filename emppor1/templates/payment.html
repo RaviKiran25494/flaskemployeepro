@@ -1,0 +1,49 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+<div class="container-fluid">
+  
+  <div class="row">
+    <div class="col-sm-3" style="background-color:lavender;"></div>
+    <!-- <div class="col-sm-4" style="background-color:lavenderblush;">.col-sm-4</div>
+    <div class="col-sm-4" style="background-color:lavender;">.col-sm-4</div> -->
+  <div class="col-sm-6" style="background-color:lavender;">
+    <div class="form-group">
+  	<br><br>
+	
+   <center><h1>Payments</h1></center></div>
+
+   <!-- {{form.name}} -->
+   {% from "includes/_formhelper.html" import render_field %}
+   <form method="POST" action="">
+       <div class="form-group">
+           {{render_field(form.empid, class_="form-control")}}
+       </div>
+        <div class="form-group">
+           {{render_field(form.name, class_="form-control")}}
+       </div>
+       <div class="form-group">
+           {{render_field(form.department, class_="form-control")}}
+       </div>
+       <div class="form-group">
+           {{render_field(form.mounth, class_="form-control")}}
+       </div>
+        <div class="form-group">
+           {{render_field(form.leavedays, class_="form-control")}}
+       </div>
+       <div class="form-group">
+           {{render_field(form.actualctc, class_="form-control")}}
+       </div>
+       <div class="form-group">
+           {{render_field(form.payblectc, class_="form-control")}}
+       </div>
+
+        <center><p><input type="submit" class="btn btn-primary" value="Submit"></p></center>
+   </form>
+    </div>
+   <div class="col-sm-3" style="background-color:lavender;"></div>
+   </div>
+</div>
+
+
+{% endblock %}

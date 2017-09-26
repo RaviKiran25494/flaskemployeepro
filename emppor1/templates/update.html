@@ -1,0 +1,71 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+<div class="container-fluid">
+  
+  <div class="row">
+    <div class="col-sm-1" style="background-color:lavender;"></div>
+    <!-- <div class="col-sm-4" style="background-color:lavenderblush;">.col-sm-4</div>
+    <div class="col-sm-4" style="background-color:lavender;">.col-sm-4</div> -->
+  <div class="col-sm-10" style="background-color:lavender;">
+    <div class="form-group">
+   
+    <center><h1>Register</h1></center></div>
+<div class="container">
+  	<div class="row">
+  		<div class="col-md-8 col-md-offset-2 col-md-offset-right-2">
+		<form action="/back12" method='put'>
+			<div class="form-group">
+				<label for="Id">Id:</label>
+				<input type="text" name='idel' value="{{ person['id'] }}" placeholder="Enter Id" class="form-control">
+			</div>
+			<div class="form-group">
+				<label for="Name">Name:</label>
+				<input type="text" name='name' value="{{ person['Name'] }}" placeholder="Enter name" class="form-control">
+			</div>
+			<div class="form-group">
+				<label for="Email">Email:</label>
+				<input type="email" name='email' value="{{ person['Email_id'] }}" placeholder="Enter Email Id" class="form-control">
+			</div>
+			<div class="form-group">
+				<label for="Father_Mother_Name">Father_Mother_Name:</label>
+				<input type="text" name='father_mother_name' value="{{ person['Father_Mother_Name'] }}" placeholder="Enter Father_Mother_Name" placeholder="Father_Mother_Name" class="form-control">
+			</div>
+			<div class="form-group">
+				<label for="Date_Of_Birth">Date Of Birth:</label>
+				<input type="date" name='date_of_brith' value="{{ person['Date_Brith'] }}" placeholder="Date Of Birth" class="form-control">
+			</div>
+			<div class="form-group">
+				<label for="Address">Address:</label>
+				<input type="text" name='address' value="{{ person['Address'] }}" placeholder="Enter Address" class="form-control">
+			</div>
+			<div class="form-group">
+				<label for="Aadhar No">Aadhar No:</label>
+				<input type="text" name='aadhar_number' value="{{ person['Aadhar_number'] }}" placeholder="Enter Aadhar No" class="form-control">
+			</div>
+			<div class="form-group">
+				<label for="Mobile No">Mobile No:</label>
+				<input type="text" name='mobile' value="{{ person['Phone_number'] }}" placeholder="Enter Mobile No" class="form-control">
+			</div>
+			<div class="form-group">
+				<label for="Alternate No">Alternate No:</label>
+				<input type="text" name='alternate_no' value="{{ person['Alternate_no'] }}" placeholder="Enter Alternate No" class="form-control">
+			</div>
+			<div class="form-group" style="padding-bottom: 10px;">
+				<label for="Type">Type:</label>
+				<input type="text" name='type' value="{{ person['Type'] }}" placeholder="Enter Type" class="form-control">
+			</div>
+			<div class="button-group" style="text-align: center;">
+				<input type="submit" name='submit' value='Submit' class="btn btn-success" style="padding: 10px 70px 10px 70px"> 
+			</div>			
+		</form>
+		</div>
+	</div>
+ </div>
+ </div>
+   <div class="col-sm-1" style="background-color:lavender;"></div>
+   </div>
+</div>
+
+
+{% endblock %}

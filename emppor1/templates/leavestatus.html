@@ -1,0 +1,55 @@
+{% extends 'layout1.html' %}
+
+{% block body %}
+<div class="container-fluid">
+  
+  <div class="row">
+    <div class="col-sm-1" style="background-color:lavender;"></div>
+    <!-- <div class="col-sm-4" style="background-color:lavenderblush;">.col-sm-4</div>
+    <div class="col-sm-4" style="background-color:lavender;">.col-sm-4</div> -->
+  <div class="col-sm-10" style="background-color:lavender;">
+    <div class="form-group">
+    
+    <center><h1>leavestatus</h1></center></div>
+    <style>
+table, th, td {
+    border: 2px solid black;
+    border-collapse: collapse;
+    width:10px;
+}
+</style>
+
+<center><table style="width:70%">
+  <tr>
+    <th><center>ID</center></th>
+    <th><center>NAME</center></th>
+    <th><center>Department</center></th>
+    <th><center>Leave_form</center></th>
+    <th><center>Leave_To</center></th>
+    <th><center>Number_of_days</center></th>
+    <th><center>Reason</center></th>
+    <th><center>Status</center></th>
+    
+  </tr>  
+  {% for x in rv1%}
+  <tr>
+    <td><center>{{x['emp_id']}}</center></td>
+    <td><center>{{x['emp_name']}}</center></td>
+    <td><center>{{x['department']}}</center></td>  
+    <td><center>{{x['leave_form']}}</center></td>
+    <td><center>{{x['leave_to']}}</center></td>
+    <td><center>{{x['Number_of_days']}}</center></td>
+    <td><center>{{x['reason']}}</center></td>
+    <td><center>{{x['status']}}</center></td>
+    
+  {% endfor %}
+</table></center>
+
+<br><br>
+ </div>
+   <div class="col-sm-1" style="background-color:lavender;"></div>
+   </div>
+</div>
+
+
+{% endblock %}

@@ -1,0 +1,67 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+
+<div class="container-fluid">
+  
+  <div class="row">
+    <div class="col-sm-1" style="background-color:lavender;"></div>
+    <!-- <div class="col-sm-4" style="background-color:lavenderblush;">.col-sm-4</div>
+    <div class="col-sm-4" style="background-color:lavender;">.col-sm-4</div> -->
+  <div class="col-sm-10" style="background-color:lavender;">
+    <div class="form-group">
+    
+    <center><h1>Employee-Detalies</h1></center></div>
+    <style>
+table, th, td {
+    border: 2px solid black;
+    border-collapse: collapse;
+    width:10px;
+}
+</style>
+
+<center><table style="width:70%">
+  <tr>
+    <th><center>ID</center></th>
+    <th><center>NAME</center></th>
+    <th><center>Date_Brith</center></th>
+    <th><center>Address</center></th>
+    <th><center>Phone_num </center></th>
+    <th><center>Email </center></th>
+    <th><center>Alternate_num</center></th>
+    <th><center>Date_join</center></th>
+    <th><center>Post</center></th>
+    <th><center>Type</center></th>
+    <th><center>Pay_role</center></th>
+    <th><center>Dep</center></th>
+    <th><center>Remark </center></th>
+  </tr>  
+  {% for x in person%}
+  <tr>
+    <td><center>{{x['id']}}</center></td>
+    <td><center>{{x['Name']}}</center></td>
+    <td><center>{{x['Date_Brith']}}</center></td>
+    <td><center>{{x['Address']}}</center></td>
+    <td><center>{{x['Phone_num']}}</center></td>
+    <td><center>{{x['Email']}}</center></td>
+    <td><center>{{x['Alternate_num']}}</center></td>
+    <td><center>{{x['Date_join']}}</center></td>
+    <td><center>{{x['Post']}}</center></td>
+    <td><center>{{x['Type']}}</center></td>
+    <td><center>{{x['Pay_role']}}</center></td>
+    <td><center>{{x['Dep']}}</center></td>
+    <td><center>{{x['Remark']}}</center></td>
+  </tr>  
+  
+  {% endfor %}
+</table></center>
+
+<br><br>
+ </div>
+   <div class="col-sm-1" style="background-color:lavender;"></div>
+   </div>
+</div>
+
+
+{% endblock %}
+ 

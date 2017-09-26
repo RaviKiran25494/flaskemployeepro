@@ -1,0 +1,104 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+<div class="container-fluid">
+  
+  <div class="row">
+    <div class="col-sm-1" style="background-color:lavender;"></div>
+    <!-- <div class="col-sm-4" style="background-color:lavenderblush;">.col-sm-4</div>
+    <div class="col-sm-4" style="background-color:lavender;">.col-sm-4</div> -->
+  <div class="col-sm-10" style="background-color:lavender;">
+    <div class="form-group">
+       <style>
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    width:5px;
+}
+</style>
+    <center><h1>Fulltime</h1></center></div>
+    <center><table style="width:80%">
+  <tr>
+    <td name='id'><center>ID</center></td>
+    <td><center>{{ person['id'] }}</center></td>
+  </tr><tr>
+    <th><center>NAME</center></th>
+    <td name='Name'><center>{{ person['Name'] }}</center></td>
+  </tr><tr>
+    <th><center>father/mothername</center></th><td  name='Father_Mother_Name'><center>{{ person['Father_Mother_Name'] }}</center></td> 
+  </tr><tr>
+    <th><center>DOB</center></th>
+    <td name='Date_Brith'><center>{{ person['Date_Brith'] }}</center></td>
+  </tr><tr>
+    <th><center>Address</center></th>
+    <td name='Address'><center>{{ person['Address'] }}</center></td>
+  </tr><tr>
+    <th><center>Aadher_number</center></th>
+    <td name='Aadhar_number'><center>{{ person['Aadhar_number'] }}</center></td>
+  </tr><tr>
+    <th><center>Phone_number</center></th>
+    <td name='Phone_number'><center>{{ person['Phone_number'] }}</center></td>
+  </tr><tr>
+    <th><center>&nbsp;&nbsp; &nbsp;Email_id&nbsp;&nbsp;&nbsp;</center></th>
+    <td  name='Email_id'><center>{{ person['Email_id'] }}</center></td>
+  </tr><tr>
+    <th><center>Alternate_no</center></th>
+    <td name='Alternate_no'><center>{{ person['Alternate_no'] }}</center></td>
+  </tr><tr>
+    <th><center>Type</center></th>
+    <td name='Type'><center>{{ person['Type'] }}</center></td>
+  </tr></table></center>
+    
+ 
+
+<div class="container">
+  	<div class="row">
+  		<div class="col-md-10 col-md-offset-1 col-md-offset-right-1">
+		<form action="/fulltime1" method='put'>
+			<div class="form-group">
+				<label for="Id">Id:</label>
+				<input type="text" name='idel' value="{{ person['id'] }}" placeholder="Enter Id" class="form-control">
+			</div>
+			<div class="form-group">
+				<label for="Date_Of_Joining">Date_Of_Joining:</label>
+				<input type="date" name='DOB'  placeholder="Date_Of_Joining" class="form-control">
+			</div>
+			<div class="form-group" style="padding-bottom: 10px;">
+				<label for="Department">Department:</label>
+				<input type="text" name='Department'  placeholder="Enter Department" class="form-control">
+			</div>
+			<div class="form-group" style="padding-bottom: 10px;">
+				<label for="Post">Post:</label>
+				<select class="form-control" name="sel">
+				  <option value="volvo">Executive</option>
+				  <option value="saab">Manager</option>
+				  <option value="mercedes">HR</option>
+				  <option value="audi">Developer</option>
+				</select>
+				<!-- <input type="text" name='Department'  placeholder="Enter Department" class="form-control"> -->
+			</div>
+			<div class="form-group" style="padding-bottom: 10px;">
+				<label for="Payrole">Payrole:</label>
+				<input type="text" name='Payrole'  placeholder="Enter your Payrole" class="form-control">
+			</div>
+			<div class="form-group" style="padding-bottom: 10px;">
+				<label for="Remarks">Remarks:</label>
+				<input type="text" name='Remarks'  placeholder="Enter Remarks" class="form-control">
+			</div>
+			<div class="button-group" style="text-align: center;">
+				<input type="submit" name='submit' value='Submit' class="btn btn-success" style="padding: 10px 70px 10px 70px"> 
+			</div>
+			<!-- <div class="button-group" style="text-align: center;">
+				<th><center><button><a class="btn btn-danger" href="/fulltime1?id={{person['id']}}">Join</a></button></center></th>
+			</div>	 -->		
+		</form>
+		</div>
+	</div>
+ </div>
+ </div>
+   <div class="col-sm-1" style="background-color:lavender;"></div>
+   </div>
+</div>
+
+
+{% endblock %}

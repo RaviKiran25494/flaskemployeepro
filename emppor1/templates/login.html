@@ -1,0 +1,35 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+<div class="container-fluid">
+  
+  <div class="row">
+    <div class="col-sm-3" style="background-color:lavender;"></div>
+    <!-- <div class="col-sm-4" style="background-color:lavenderblush;">.col-sm-4</div>
+    <div class="col-sm-4" style="background-color:lavender;">.col-sm-4</div> -->
+  <div class="col-sm-6" style="background-color:lavender;">
+    <div class="form-group">
+    <br><br>
+   <center><h1>Login</h1></center>
+   {% include 'includes/_messages.html' %}
+   <form method="POST" action="">
+       <div class="form-group">
+           <label>Username</label>
+           <input type="text" class="form-control" name="username" value="{{request.form.username}}">
+       </div>
+       <div class="form-group">
+           <label>Password</label>
+           <input type="password"  class="form-control" name="password" value="{{request.form.password}}">
+       </div>
+       
+       <center><button type="submit" class="btn btn-primary">LOGIN</button></center><br><br>
+       <center><button><a class="btn btn-primary" href='/forgot'>Forgot Password</a></button></center><br><br>
+   </form>
+<p>You are new USER Please <a href="/signup">EMPloyee</a></p>
+ </div>
+   <div class="col-sm-3" style="background-color:lavender;"></div>
+   </div>
+</div>
+
+
+{% endblock %}
